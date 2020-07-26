@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 
 function Works(props) {
   const { visible } = props
-  const style = visible ? { display: "block" } : { display: "none" }
+  const style = visible ? { display: 'block' } : { display: 'none' }
   return <div style={style}>works</div>
 }
 

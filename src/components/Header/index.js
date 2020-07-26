@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import menu from "./menu"
-import { clickMenu } from "../../actions"
+import React, { useState } from 'react'
+import menu from './menu'
+import { clickMenu } from '../../actions'
 
 function Header() {
   const [active, setActive] = useState(0)
@@ -11,13 +11,13 @@ function Header() {
   }
 
   return (
-    <header className="menu">
+    <header className='menu'>
       <nav>
         {menu &&
           menu.map((item, key) => (
             <a
               onClick={() => onClickMenu(item, key)}
-              className={key === active ? "active" : ""}
+              className={key === active ? 'active' : ''}
               key={item.name}
               href={item.href}
             >
@@ -27,7 +27,7 @@ function Header() {
           ))}
       </nav>
     </header>
-  );
+  )
 }
 
 export default Header
