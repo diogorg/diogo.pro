@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function About(props) {
   const { visible } = props
@@ -8,6 +9,10 @@ function About(props) {
       <h4 className='about-title'>ABOUT</h4>
     </div>
   )
+}
+
+About.propTypes = {
+  visible: PropTypes.bool
 }
 
 export default About

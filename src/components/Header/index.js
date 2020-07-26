@@ -13,18 +13,17 @@ function Header() {
   return (
     <header className='menu'>
       <nav>
-        {menu &&
-          menu.map((item, key) => (
-            <a
-              onClick={() => onClickMenu(item, key)}
-              className={key === active ? 'active' : ''}
-              key={item.name}
-              href={item.href}
-            >
-              {item.icon}
-              <span>{item.name}</span>
-            </a>
-          ))}
+        {menu.map((item, key) => (
+          <a
+            onClick={() => onClickMenu(item, key)}
+            className={key === active ? 'active' : ''}
+            key={item.name}
+            href={item.href}
+          >
+            {item.icon}
+            <span>{item.name}</span>
+          </a>
+        ))}
       </nav>
     </header>
   )

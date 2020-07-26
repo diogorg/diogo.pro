@@ -6,3 +6,5 @@ export const Reducers = (state = { actived: 'ABOUT' }, action) => {
       return state
   }
 }
+
+export default Reducers

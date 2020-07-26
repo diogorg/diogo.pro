@@ -1,5 +1,8 @@
 import React from 'react'
-import { FaGithub, FaLinkedin, FaGitlab, FaInstagram } from 'react-icons/fa'
+// prettier-ignore
+import {
+  FaGithub, FaLinkedin, FaGitlab, FaInstagram
+} from 'react-icons/fa'
 
 function Home() {
   return (
