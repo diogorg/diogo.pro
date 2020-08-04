@@ -11,11 +11,11 @@ function Content() {
   return (
     <div className='content'>
       <div className='opened' style={{ color: '#000' }}>
-        <About visible={actived === 'ABOUT'} />
-        <Resume visible={actived === 'RESUME'} />
-        <Works visible={actived === 'WORKS'} />
-        <Board visible={actived === 'BOARD'} />
-        <Contact visible={actived === 'CONTACT'} />
+        {actived === 'ABOUT' && <About />}
+        {actived === 'RESUME' && <Resume />}
+        {actived === 'WORKS' && <Works />}
+        {actived === 'BOARD' && <Board />}
+        {actived === 'CONTACT' && <Contact />}
       </div>
     </div>
   )

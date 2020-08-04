@@ -127,14 +127,16 @@ $radius-size: 4px;
   grid-area: content;
 }
 
-.about .about-title {
+.content-title {
   width: 100%;
-  text-align: left;
+  text-align: center;
   position: relative;
   padding: 5px 5px 15px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
 }
 
-.about .about-title:after {
+.content-title:after {
   content: '';
   position: absolute;
   height: 1px;
@@ -196,7 +198,20 @@ $radius-size: 4px;
   width: auto;
   height: auto;
   transform-origin: center left;
-  padding: 20px 0px;
+  padding: 20px 0px 70px;
+  overflow-y: visible;
+  scrollbar-width: thin;
+  margin-bottom: 32px;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #aaa;
+  }
 
   .opened {
     @extend .radius-border;
@@ -205,6 +220,29 @@ $radius-size: 4px;
     background: linear-gradient(15deg, #ffffff 20%, #eee 100%);
     z-index: 5;
     overflow: hidden;
+    overflow-y: visible;
+    scrollbar-width: thin;
+    color: rgb(0, 0, 0);
+    padding: 0px 0px 15px;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+    display: flex;
+    align-self: stretch;
+    font-family: "Dancing Script", cursive;
+    font-size: 22px;
+    width: calc(100% -50px);
+    margin: 25px;
+    padding: 25px;
+    border: 1px dashed #ccc;
+    text-align: left;
+    flex-grow: 1;
+    justify-content: flex-start;
+
+    p {
+      width: 100%;
+    }
   }
 }
 
@@ -238,10 +276,6 @@ footer {
     grid-template-areas:
       "menu . profile"
       ". . content";
-
-    >div {
-      min-height: 300px;
-    }
   }
 
   .page nav {
@@ -261,10 +295,6 @@ footer {
       "."
       "profile"
       "content";
-
-    >div {
-      min-height: 300px;
-    }
 
     >.menu {
       height: 75px;

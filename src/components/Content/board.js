@@ -1,14 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-function Board(props) {
-  const { visible } = props
-  const style = visible ? { display: 'block' } : { display: 'none' }
-  return <div style={style}>board</div>
-}
-
-Board.propTypes = {
-  visible: PropTypes.bool
+function Board() {
+  return (
+    <div className='board'>
+      <h4 className='content-title'>BOARD</h4>
+    </div>
+  )
 }
 
 export default Board

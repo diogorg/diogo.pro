@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
+import { clickMenu } from 'redux/actions'
 import menu from './menu'
-import { clickMenu } from '../../actions'
 
 function Header() {
   const [active, setActive] = useState(0)

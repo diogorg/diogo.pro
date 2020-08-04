@@ -1,14 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
-function Resume(props) {
-  const { visible } = props
-  const style = visible ? { display: 'block' } : { display: 'none' }
-  return <div style={style}>resume</div>
-}
-
-Resume.propTypes = {
-  visible: PropTypes.bool
+function Resume() {
+  return (
+    <div className='resume'>
+      <h4 className='content-title'>RESUME</h4>
+    </div>
+  )
 }
 
 export default Resume

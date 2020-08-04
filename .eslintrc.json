@@ -17,6 +17,11 @@
     "ecmaVersion": 2020
   },
   "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    },
     "react": {
       "pragma": "React",
       "version": "detect"
@@ -26,6 +31,9 @@
     "quotes": ["error", "single"],
     "semi": ["error", "never"],
     "prettier/prettier": "error",
-    "comma-dangle":"off"
+    "comma-dangle":"off",
+    "object-curly-newline": "off",
+    "max-len": ["error", { "code": 120 }],
+    "no-return-assign": "off"
   }
 }
